@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+// import propTypes from 'prop-types';
+
 
 export default class Search extends Component {
     state = {
@@ -9,7 +11,7 @@ export default class Search extends Component {
         this.setState({value: e.target.value});
     };
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
         e.preventDefault();
         this.props.onSubmit(this.state.value);
         this.setState({value: ''});

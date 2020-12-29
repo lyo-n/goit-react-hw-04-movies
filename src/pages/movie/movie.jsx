@@ -18,7 +18,7 @@ export default class MainPage extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const {query: prevQuery} = queryParams(prevState.location.search);
+        const {query: prevQuery} = queryParams(prevProps.location.search);
         const {query: nextQuery} = queryParams(this.props.location.search);
         if (prevQuery !== nextQuery) {
             this.fetchMovies(nextQuery);

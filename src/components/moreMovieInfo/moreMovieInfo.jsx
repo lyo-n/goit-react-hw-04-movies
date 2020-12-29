@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-// import styles from '../navigation/Navigation.module.css';
 import propTypes from 'prop-types';
 
 export default class MoreInfo extends Component {
@@ -14,10 +13,7 @@ export default class MoreInfo extends Component {
                     to={{
                     pathname: `/movie/${id}/cast`,
                     state: { from: this.props.newLocation },
-                    }}
-                // className={styles.NavigationLink + ' ' + styles.AddInfoLink}
-                // activeClassName={styles.NavigationLinkActive}
-                >
+                    }}>
                     Cast
                 </NavLink>
                 <br />
@@ -25,10 +21,7 @@ export default class MoreInfo extends Component {
                     to={{
                     pathname: `/movie/${id}/reviews`,
                     state: { from: this.props.newLocation },
-                    }}
-                // className={styles.NavigationLink + ' ' + styles.AddInfoLink}
-                // activeClassName={styles.NavigationLinkActive}
-                >
+                    }}>
                     Reviews
                 </NavLink>
             </div>

@@ -2,7 +2,6 @@ import React, {Component, lazy, Suspense} from 'react';
 import {Route} from 'react-router-dom';
 import API from '../../service/API';
 import routes from '../../routes';
-// import styles from './MovieDetailsPage.module.css';
 import moreInfo from '../../components/moreMovieInfo/moreMovieInfo';
 
 const AsyncCast = lazy(() =>
@@ -41,18 +40,15 @@ export default class movieDetails extends Component {
     return (
       <div>
         <button 
-        // className={styles.backBtn} 
-        onClick={this.handleGoBack}>
-          &#8592; Go back
+        onClick={this.handleBack}> &#8592; 
+        Go back
         </button>
         <br />
         {movie && (
           <>
             <div 
-            // className={styles.movieWrapper}
             >
               <div 
-              // className={styles.imageWrapper}
               >
                 <img
                   src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
@@ -60,7 +56,6 @@ export default class movieDetails extends Component {
                 />
               </div>
               <div 
-              // className={styles.detailsWrapper}
               >
                 <h2>
                   {movie.original_title} ({movie.release_date.slice(0, 4)})

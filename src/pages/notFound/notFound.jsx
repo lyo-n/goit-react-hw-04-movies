@@ -5,9 +5,9 @@ const notFound = () => {
     return(
         <div>
             <Link to="/">
-            <img src={require('../../img/error.jpg')}/>
+            <p>Вернуться на главную страницу</p>
             </Link>
-             {/* <p>Вернитесь на главную страницу</p> */}
+             
         </div>
     );
 };

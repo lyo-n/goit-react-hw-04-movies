@@ -32,6 +32,8 @@ const reviewsMovies = (id) => {
     );
 };
 
+
+
 export default {
     trendingMovies,
     searchMovies,
