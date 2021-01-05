@@ -1,5 +1,7 @@
 [build]
-    publich = "build"
+    command = "npm run build"
+    publish = "build"
+    base = "/"
 
 [[redirects]]
     from = "/*"
