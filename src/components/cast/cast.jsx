@@ -10,7 +10,7 @@ export default class Cast extends Component {
 
   componentDidMount() {
     API
-      .fetchMovieCast(this.props.match.params.movieId)
+      .castMovies(this.props.match.params.movieId)
       .then(cast => this.setState({ cast }));
   }
 
@@ -42,3 +42,4 @@ export default class Cast extends Component {
     );
   }
 }
+

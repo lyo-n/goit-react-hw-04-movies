@@ -18,7 +18,7 @@ const AsyncNotFoundPage = lazy(() =>
   import('../pages/notFound/notFound' /* webpackChunkName: "NotFoundPage" */),
 );
 
-function App() {
+function APP() {
   return (
     <div className="App">
       <Navigation />
@@ -37,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default APP;

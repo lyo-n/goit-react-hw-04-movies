@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 import API from '../../service/API';
 
 export default class Reviews extends Component {
-    tate = {
-        reviews: [] 
-    };
+  state = { reviews: [] };
 
-    componentDidMount() {
-        API
-        .fetchMovieReviews(this.props.match.params.movieId)
-        .then(reviews => this.setState({ reviews }));
-    }
+  componentDidMount() {
+    API
+      .reviewsMovies(this.props.match.params.movieId)
+      .then(reviews => this.setState({ ...reviews }));
+  }
 
-    render() {
-        const { reviews } = this.state;
+  render() {
+    const { reviews } = this.state;
     return (
       <>
-        {reviews.length > 0 ? (
+        {reviews && reviews.length > 0 ? (
           <ul>
             {reviews.map(review => (
               <li key={review.id}>
@@ -28,7 +26,7 @@ export default class Reviews extends Component {
             ))}
           </ul>
         ) : (
-          <p>there is no reviews for this movie</p>
+          <p>There is no reviews for this movie</p>
         )}
       </>
     );

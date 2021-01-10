@@ -32,10 +32,12 @@ const reviewsMovies = (id) => {
     );
 };
 
-export default {
+ const API = {
     trendingMovies,
     searchMovies,
     detailsMovies,
     castMovies,
     reviewsMovies,
 };
+
+export default API;
