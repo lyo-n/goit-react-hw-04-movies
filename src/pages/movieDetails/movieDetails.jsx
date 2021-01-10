@@ -2,7 +2,11 @@ import React, {Component, lazy, Suspense} from 'react';
 import {Route} from 'react-router-dom';
 import API from '../../service/API';
 import routes from '../../routes';
+<<<<<<< HEAD
 import MoreInfo from '../../components/moreMovieInfo/moreMovieInfo';
+=======
+import moreInfo from '../../components/moreMovieInfo/moreMovieInfo';
+>>>>>>> 66f0fd5246523d503789de367e21021c03053463
 
 const AsyncCast = lazy(() =>
   import('../../components/cast/cast'),

@@ -32,7 +32,13 @@ const reviewsMovies = (id) => {
     );
 };
 
+<<<<<<< HEAD
  const API = {
+=======
+
+
+export default {
+>>>>>>> 66f0fd5246523d503789de367e21021c03053463
     trendingMovies,
     searchMovies,
     detailsMovies,
